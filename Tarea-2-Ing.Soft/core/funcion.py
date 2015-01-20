@@ -20,7 +20,7 @@ class Tarifa:
         f_en_comp = datetime.datetime.combine(f_en, h_en)
         f_sal_comp = datetime.datetime.combine(f_sal, h_sal)
         if f_sal_comp > f_en_comp:
-           f_completa_total = f_sal_comp - f_en_comp 
+            f_completa_total = f_sal_comp - f_en_comp 
         elif f_sal_comp < f_en_comp:
             print("Fechas invalidas")
         else:
@@ -32,24 +32,24 @@ class Tarifa:
         
 ''' M A I N '''
     
-t_d = raw_input("Introduce la tarifa diurna")    
+t_d = input("Introduce la tarifa diurna")    
    
-t_n = raw_input("Introduce la tarifa nocturna")
+t_n = input("Introduce la tarifa nocturna")
 
-h_en = raw_input("Introduce la hora de entrada HH:MM")
+h_en = input("Introduce la hora de entrada HH:MM")
 HE,ME = [int(a) for a in h_en.split(":")]
 
-h_sal = raw_input("Introduce la hora de salida HH:MM")
+h_sal = input("Introduce la hora de salida HH:MM")
 HS,MS = [int(b) for b in h_en.split(":")]
 
-f_en = raw_input("Introduce la fechaentrada YYYY-MM-DD")
-YYYYE,MME,DDE = [int(c) for c in h_en.split("-")]
+f_en = input("Introduce la fechaentrada YYYY-MM-DD")
+YYYYE,MME,DDE = [int(c) for c in f_en.split("-")]
 
-f_sal = raw_input("Introduce la fechasalida YYYY-MM-DD")
-YYYYS,MMS,DDS = [int(d) for d in h_en.split("-")]
+f_sal = input("Introduce la fechasalida YYYY-MM-DD")
+YYYYS,MMS,DDS = [int(d) for d in f_en.split("-")]
 
 tarif = Tarifa();
 tarif.tarif_d = t_d
 tarif.tarif_n = t_n
 totalPagar = tarif.calcularTotal(YYYYE,MME,DDE,HE,ME,YYYYS,MMS,DDS,HS,MS)
-print("El total a pagar es: "+ totalPagar)
+print("El total a pagar es: "+ str(totalPagar))
