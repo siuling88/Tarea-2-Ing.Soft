@@ -5,10 +5,10 @@ Created on 20/1/2015
 '''
 
 import unittest
-from funcion.tarifa import Tarifa
-from funcion.tarifa import TiempoMaximo
-from funcion.tarifa import TiempoMinimo
-from funcion.tarifa import FechasErroneas
+from core.funcion import Tarifa
+from core.funcion import TiempoMaximo
+from core.funcion import FechasErroneas
+from core.funcion import TiempoMinimo
 
 class TestTarifa(unittest.TestCase):
 
